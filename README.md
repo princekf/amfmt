@@ -15,4 +15,4 @@
 * `yarn build:shared`
 * `yarn install:all`
 * `yarn start`
-* some times there will be errors with shared imports in ui or server project then do `yarn upgrade @atme` (in ui/server fodler)
+* some times there will be errors with shared imports in ui or server project then do `yarn upgrade @shared` (in ui/server fodler)

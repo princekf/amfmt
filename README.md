@@ -1,6 +1,6 @@
-# A starter project for angular-material-express-typescript combination #
+# A starter project for angular-material-fastify-typescript combination #
 
-* Server - express
+* Server - Fastify
 * Database - MongoDB
 * UI - Angular 11
 * UX - Material
@@ -12,6 +12,7 @@
 ### How do I get set up locally? ###
 
 * Clone repo 
+* `yarn install:all`
 * `yarn build:shared`
 * `yarn install:all`
 * `yarn start`

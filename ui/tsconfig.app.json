@@ -6,7 +6,7 @@
     "types": [],
     "baseUrl": ".",
     "paths": {
-      "@sharedservices/*" :["src/app/shared/services/*"],
+      "@sharedservices/*" :["src/app/services/*"],
       "@sharedenvironments/*" :["src/environments/*"]
     }
   },

@@ -3,8 +3,9 @@ import { SIGNUP_API, LOGIN_API } from '@shared/serverAPI';
 import { UserDoc, UserModel } from './user.model';
 import { User, UserS } from '@shared/entity/User';
 import { CommonUtil } from '@ls-base/util/common.util';
-import { HTTP_RESPONSE_CODE } from '@shared/Constants';
+import { HTTP_RESPONSE_CODE, ACCESS_TOKEN_ID } from '@shared/Constants';
 import { userService } from './user.service';
+import { SessionManager } from '@ls-base/util/auth/session.manage';
 
 const { HTTP_OK, HTTP_BAD_REQUEST } = HTTP_RESPONSE_CODE;
 
@@ -60,6 +61,9 @@ class UserController {
       return;
 
     }
+    const accessToken = SessionManager.createJWTToken({name: userE.name,
+      email: userE.email});
+    reply.header(ACCESS_TOKEN_ID, accessToken);
     reply.send({message: 'success'}).status(HTTP_OK);
 
   };

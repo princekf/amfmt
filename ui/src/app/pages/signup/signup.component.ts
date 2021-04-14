@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserS } from '@shared/entity/User';
-import { UserService } from '@sharedservices/user.service';
+import { UserService } from '@services/user.service';
 
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
-  styleUrls: [ './signup.component.scss' ]
+  styleUrls: [ './signup.component.scss', '../../shared/style/login-register.scss' ]
 })
 export class SignupComponent {
 
